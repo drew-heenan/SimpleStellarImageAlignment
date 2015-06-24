@@ -13,11 +13,11 @@ public class MainWindow extends JFrame {
     private final Display display = new Display();
                
     public MainWindow() {
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Simple Star Image Stacker");
         setPreferredSize(new java.awt.Dimension(1000, 666));
         setResizable(false);
+        
 
         GroupLayout controlPanelLayout = new GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
@@ -57,6 +57,7 @@ public class MainWindow extends JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }                     
                                 
 }
