@@ -27,12 +27,7 @@ public class Alignment {
             c = bT;
         }
         
-        Line2D ab = new Line2D.Double(a.toAWTPoint(), b.toAWTPoint());
-        Line2D bc = new Line2D.Double(b.toAWTPoint(), c.toAWTPoint());
-        Line2D ac = new Line2D.Double(a.toAWTPoint(), c.toAWTPoint());
-        
         Point acMidpoint = new Point((a.x + c.x)/2, (a.y + c.y)/2);
-        Line2D midline = new Line2D.Double(b.toAWTPoint(), acMidpoint.toAWTPoint());
         
         //Ascension angle of the angles formed by acMidpoint, 'a' and 'c', and 'b'.
         double bToacMidpointDistance = b.distance(acMidpoint);
@@ -44,8 +39,6 @@ public class Alignment {
         double angleC = Math.asin(bToacMidpointDistance/bcDistance);
         
         double angleBA = PI - (Math.abs(angleA) + PI/2.0);
-        double angleBC = PI - (Math.abs(angleC) + PI/2.0);
-        
         
         double vertAngle = PI - 2*angleBA; //It's an isosceles triangle.
         System.out.println(Math.toDegrees(vertAngle));

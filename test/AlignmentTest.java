@@ -31,7 +31,7 @@ public class AlignmentTest {
     }
     
     @Test
-    public void testAlign() {
+    public void testFindPolarStar() {
         Point center = new Point(2435, 2529);
         Point b = new Point(2435, 2800);
         double angle = .0001;
